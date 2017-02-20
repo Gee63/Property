@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <title>reales | Documentation</title>
+
+        <link href="assets/css/bootstrap.css" rel="stylesheet">
+        <link href="assets/css/style.css" rel="stylesheet">
+
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div class="leftSide">
+            <div class="title">Reales - Real Estate Web Application Template</div>
+            <div class="subtitle">Documentation by Marius Nastase<br>Email: <a href="mailto:n3sty.marius@gmail.com">n3sty.marius@gmail.com</a></div>
+            <div class="toc">
+                <div class="tocTitle">Table of Contents</div>
+                <ul>
+                    <li class="tocHeader">Installation and Setup</li>
+                    <li class="tocHeader">CSS</li>
+                    <li><a href="#table">Table of contents</a></li>
+                    <li><a href="#colors">Colors</a></li>
+                    <li><a href="#icons">Icons</a></li>
+                    <li><a href="#buttons">Buttons</a></li>
+                    <li class="tocHeader">HTML</li>
+                    <li><a href="#layout">Layout structure</a></li>
+                    <li class="tocHeader">JavaScript</li>
+                    <li><a href="#files">Files</a></li>
+                    <li><a href="#plugins">Plugins</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div class="alert alert-success">Thank you for purchasing my template.<br>If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://themeforest.net/user/mariusnastase" target="_blank">here</a>.<br>Thanks so much!</div>
+            <h3>Installation and Setup</h3>
+            <p>This template is pure HTML5 and it doesn't require any special installation process. You can just upload it on a server or open it locally and it works.</p>
+            <h4>Setup color scheme</h4>
+            <p>To setup the color scheme (please see <a href="#colors">Colors</a>) you need to change the CSS main file included in HTML files. To change the CSS main file, you have to change the file name at the top of every HTML files where the <i>app.css</i> is included. Please see below the file names that correspond to the five color schemes available for this template.</p>
+            <h3>CSS</h3>
+            <p>This template is based on <strong>Boostrap 3</strong>. For the bootstrap css and components, please check <a href="http://getbootstrap.com/" target="_blank">here</a></p>
+            <p>Apart from the CSS files used by the jquery plugins, this template uses one main CSS file (<i>app.css</i>) and four other CSS files that can replace the main one, if you want to change the color scheme (<i>app-red.css</i>, <i>app-blue.css</i>, <i>app-magenta.css</i>, <i>app-yellow.css</i>). Another CSS file is <i>fullscreen-slider.css</i> used in <i>signin.html</i> and <i>signup.html</i> files for the fullscreen slider and here you can change name files for images displayed in the slider:<br>
+            <pre>
+.cb-slideshow li:nth-child(1) span { 
+    background-image: url(../images/bg-1.jpg) 
+}
+            </pre></p>
+            <p>The main CSS file structure is presented below</p>
+            <h4 id="table">Table of contents</h4>
+            <pre>
+[Homepage Layout]
+
+* body
+    + Hero / #hero-container
+        - Slider / .cb-slideshow
+        - Header / .home-header
+            - Navigation / .home-nav
+        - Caption / .home-caption
+        - Search Panel / .search-panel
+    + Highlight / .highlight
+    + Content / .home-content
+    + Footer / .home-content
+            </pre>
+            <pre>
+[Blog Layout]
+
+* body
+    + Search / .blog-search
+    + Hero / #hero-container-blog
+        - Carousel / #carouselBlog
+        - Header / .home-header
+    + Content / .blog-content
+    + Footer / .home-footer
+            </pre>
+            <pre>
+[Application Layout]
+
+* body
+    + Header / #header
+    + Sidebar / #leftSide
+        - Navigation / .leftNav
+    + Map / #mapView
+    + Content / #content
+            </pre>
+            <h4 id="colors">Colors</h4>
+            <p>The template use 5 custom palette colors and each palette has it's own css file: <i>app.css</i> (green base color), <i>app-red.css</i>, <i>app-blue.css</i>, <i>app-magenta.css</i>, <i>app-yellow.css</i></p>
+            <table class="palette">
+                <thead>
+                    <tr>
+                        <th width="30%">&nbsp;</th>
+                        <th>Green</th>
+                        <th>Red</th>
+                        <th>Blue</th>
+                        <th>Magenta</th>
+                        <th>Yellow</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="color:#333">Base</td>
+                        <td style="background-color:#0eaaa6">#0eaaa6</td>
+                        <td style="background-color:#ea3d36">#ea3d36</td>
+                        <td style="background-color:#1d82aa">#1d82aa</td>
+                        <td style="background-color:#9b156e">#9b156e</td>
+                        <td style="background-color:#eab134">#eab134</td>
+                    </tr>
+                    <tr>
+                        <td style="color:#333">Base dark</td>
+                        <td style="background-color:#068b85">#068b85</td>
+                        <td style="background-color:#d22a2a">#d22a2a</td>
+                        <td style="background-color:#086492">#086492</td>
+                        <td style="background-color:#7e115f">#7e115f</td>
+                        <td style="background-color:#dfa412">#dfa412</td>
+                    </tr>
+                    <tr>
+                        <td style="color:#333">Sidebar bg</td>
+                        <td style="background-color:#213837">#213837</td>
+                        <td style="background-color:#3b2120">#3b2120</td>
+                        <td style="background-color:#1f333b">#1f333b</td>
+                        <td style="background-color:#3a1f31">#3a1f31</td>
+                        <td style="background-color:#3a321f">#3a321f</td>
+                    </tr>
+                    <tr>
+                        <td style="color:#333">Sidebar menu item hover/active bg</td>
+                        <td style="background-color:#067670">#067670</td>
+                        <td style="background-color:#770b07">#770b07</td>
+                        <td style="background-color:#065676">#065676</td>
+                        <td style="background-color:#74054f">#74054f</td>
+                        <td style="background-color:#745104">#745104</td>
+                    </tr>
+                    <tr>
+                        <td style="color:#333">Sidebar submenu bg</td>
+                        <td style="background-color:#132120">#132120</td>
+                        <td style="background-color:#221413">#221413</td>
+                        <td style="background-color:#121d21">#121d21</td>
+                        <td style="background-color:#22121d">#22121d</td>
+                        <td style="background-color:#201b11">#201b11</td>
+                    </tr>
+                    <tr>
+                        <td style="color:#333">Sidebar submenu item hover/active bg</td>
+                        <td style="background-color:#05635e">#05635e</td>
+                        <td style="background-color:#620804">#620804</td>
+                        <td style="background-color:#044863">#044863</td>
+                        <td style="background-color:#620342">#620342</td>
+                        <td style="background-color:#634503">#634503</td>
+                    </tr>
+                    <tr>
+                        <td style="color:#333">Sidebar menu text color</td>
+                        <td style="background-color:#adc8c7;color:#333">#adc8c7</td>
+                        <td style="background-color:#c8adac;color:#333">#c8adac</td>
+                        <td style="background-color:#acc1c9;color:#333">#acc1c9</td>
+                        <td style="background-color:#caafc1;color:#333">#caafc1</td>
+                        <td style="background-color:#cac1ad;color:#333">#cac1ad</td>
+                    </tr>
+                    <tr>
+                        <td style="color:#333">Sidebar submenu text color</td>
+                        <td style="background-color:#96adac;color:#333">#96adac</td>
+                        <td style="background-color:#aa9493;color:#333">#aa9493</td>
+                        <td style="background-color:#93a4aa;color:#333">#93a4aa</td>
+                        <td style="background-color:#a893a1;color:#333">#a893a1</td>
+                        <td style="background-color:#a49d8d;color:#333">#a49d8d</td>
+                    </tr>
+                    <tr>
+                        <td style="color:#333">Sidebar user menu divider</td>
+                        <td style="background-color:#1d3331">#1d3331</td>
+                        <td style="background-color:#311d1c">#311d1c</td>
+                        <td style="background-color:#1b2b31">#1b2b31</td>
+                        <td style="background-color:#311b2a">#311b2a</td>
+                        <td style="background-color:#2f281a">#2f281a</td>
+                    </tr>
+                    <tr>
+                        <td style="color:#333">Mobile map handler hover color</td>
+                        <td style="background-color:#c6e4e3;color:#333">#c6e4e3</td>
+                        <td style="background-color:#e3c8c7;color:#333">#e3c8c7</td>
+                        <td style="background-color:#c6dce5;color:#333">#c6dce5</td>
+                        <td style="background-color:#e5c6da;color:#333">#e5c6da</td>
+                        <td style="background-color:#e6dcc5;color:#333">#e6dcc5</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4 id="icons">Icons</h4>
+            <p>The template uses webfont icons:</p>
+            <ul>
+                <li><a href="http://fortawesome.github.io/Font-Awesome/icons/" target="_blank">FontAwesome 4.2.0</a> (479 icons)</li>
+                <li><a href="http://graphicburger.com/simple-line-icons-webfont/" target="_blank">Simple Line Icons</a> (162 icons)</li>
+                <li><a href="http://getbootstrap.com/components/#glyphicons" target="_blank">Boostrap 3 Glyphicons</a> (200 icons)</li>
+            </ul>
+            <h4 id="buttons">Buttons</h4>
+            <p>According to the color palette, there are 5 names added in the class name: green, red, blue, magenta, yellow.</p>
+            <h5>Default Button</h5>
+            <p>CSS classes used: <i>.btn .btn-green</i></p>
+            <img src="assets/images/3.png">
+            <h5>Default Button Outline</h5>
+            <p>CSS classes used: <i>.btn .btn-o .btn-green</i></p>
+            <img src="assets/images/4.png">
+            <h5>Rounded Button</h5>
+            <p>CSS classes used: <i>.btn .btn-round .btn-green</i></p>
+            <img src="assets/images/5.png">
+            <h5>Rounded Button Outline</h5>
+            <p>CSS classes used: <i>.btn .btn-o .btn-round .btn-green</i></p>
+            <img src="assets/images/6.png">
+            <h5>Toggle Button</h5>
+            <img src="assets/images/7.png"><br>
+            <img src="assets/images/8.png">
+            <h5>Select Button</h5>
+            <img src="assets/images/9.png"><br>
+            <img src="assets/images/10.png">
+            <h5>Custom Checkbox</h5>
+            <img src="assets/images/11.png"><br>
+            <img src="assets/images/12.png">
+            <h5>Custom Radio Buttons</h5>
+            <img src="assets/images/13.png"><br>
+            <img src="assets/images/14.png">
+            <h5>Switch Button</h5>
+            <img src="assets/images/15.png"><br>
+            <img src="assets/images/16.png">
+
+            <h3>HTML</h3>
+            <h4 id="layout">Layout structure</h4>
+            <p>The application is structured in: header, 1 sidebar for the main navigation and 2 main columns for the map and content.</p>
+            <p>As you can see in the HTML code bellow, the main layout components are given ids: header -> <i>#header</i>, sidebar navigation -> <i>#leftSide</i>, map -> <i>#mapView</i>, content -> <i>#content</i></p>
+            <img src="assets/images/1.png" width="700" style="margin-bottom: 10px;">
+            <p>The homepage and blog pages have a different layout containing header, content and footer.</p>
+            <p>The header in wraped inside the hero of the page that contains the slideshow images (id: <i>#hero-container</i>). The content and footer have classes: content -> <i>.home-content</i>, footer -> <i>.home-footer</i></p>
+            <img src="assets/images/2.png" style="margin-bottom: 10px;">
+
+            <h3>Javascript</h3>
+            <h4 id="files">Files</h4>
+            <p>The application client side functionality is based on JQuery - <a href="http://jquery.com/" target="_blank">See documentation</a></p>
+            <p>Javascript custom files included:</p>
+            <ul>
+                <li>app.js</li>
+                <li>blog.js</li>
+                <li>calendar.js</li>
+                <li>home.js</li>
+                <li>signin.js</li>
+                <li>signup.js</li>
+                <li>table.js</li>
+                <li>sortable.js</li>
+            </ul>
+            <h4 id="plugins">Plugins</h4>
+            <ul>
+                <li>Clndr - <a href="https://github.com/kylestetz/CLNDR" target="_blank">See documentation</a></li>
+                <li>Boostrap Datepicker - <a href="http://www.eyecon.ro/bootstrap-datepicker/" target="_blank">See documentation</a></li>
+                <li>Bootstrap File Input - <a href="http://plugins.krajee.com/file-input" target="_blank">See documentation</a></li>
+                <li>InfoBox</li>
+                <li>jQuery UI Touch Punch - <a href="http://touchpunch.furf.com/" target="_blank">See documentation</a></li>
+                <li>jQuery UI Nested Sortable - <a href="https://github.com/mjsarfatti/nestedSortable" target="_blank">See documentation</a></li>
+                <li>jQuery Tags Input - <a href="http://xoxco.com/projects/code/tagsinput/" target="_blank">See documentation</a></li>
+                <li>jQuery Visible - <a href="https://github.com/teamdf/jquery-visible" target="_blank">See documentation</a></li>
+                <li>Moment - <a href="http://momentjs.com/" target="_blank">See documentation</a></li>
+                <li>TableSorter - <a href="http://tablesorter.com/docs/" target="_blank">See documentation</a></li>
+            </ul>
+        </div>
+    </body>
+</html>
